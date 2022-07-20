@@ -71,7 +71,7 @@ namespace LOLHelper.Common
                                         }
                                         break;
                                     case LCUEvent.ChampSelectUpdateSessionEvt:
-                                        。ChampionSelect championSelect = JsonConvert.DeserializeObject<ChampionSelect>(token.ToString());
+                                        ChampionSelect championSelect = JsonConvert.DeserializeObject<ChampionSelect>(token.ToString());
                                         if (championSelect.eventType.Equals("Update")) 
                                         {
                                           Task<string> task =  LCUApi.GetCurrConversationID();
